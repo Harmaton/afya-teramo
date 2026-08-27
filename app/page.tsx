@@ -1,32 +1,98 @@
-'use client';
+'use client'
 
-import RegistrationForm from "@/app/components/form";
-import { useState } from "react";
-import FloatingNavbar from "./components/Navbar";
+import RegistrationForm from '@/app/components/form'
+import FloatingNavbar from './components/Navbar'
 
 export default function RegisterPage() {
   return (
-    <div className="min-h-screen bg-neutral-950">
-      <div className="px-4">
-        <FloatingNavbar />
-      </div>
-      <main className="mx-auto max-w-4xl px-4 pt-28 pb-24 sm:pt-36 sm:pb-32">
-        <div className="mb-10 space-y-2">
-          <p className="text-xs font-mono uppercase tracking-widest text-neutral-500">
-            AICE Africa × Terumo BCT
-          </p>
-          <h1 className="text-3xl font-semibold text-neutral-100 sm:text-4xl">
-            ABBIS Hackathon — Register Your Team
-          </h1>
-          <p className="max-w-xl text-sm text-neutral-500">
-            Applications close Friday, 18 September 2026. Your entry is added directly
-            to the official registrations sheet.
-          </p>
+    <div className="min-h-screen bg-[#06110f] text-white lg:h-screen ">
+      <FloatingNavbar />
+
+      <main className="mx-auto flex min-h-screen max-w-7xl flex-col px-5 pb-5 pt-24 sm:px-8 lg:h-full lg:min-h-0 lg:px-10 lg:pt-24">
+        <div className="flex flex-1 items-center justify-center">
+          <div className="relative w-full max-w-4xl">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none">
+              <span className="whitespace-nowrap text-[clamp(6rem,18vw,16rem)] font-black uppercase leading-none tracking-[-0.09em] text-white/[0.025]">
+                ABBIS
+              </span>
+            </div>
+
+            <section className="relative">
+              <div className="text-center">
+
+                <h1 className="mx-auto max-w-3xl text-3xl font-black mt-4 uppercase leading-[0.9] tracking-[-0.045em] sm:text-4xl lg:text-5xl xl:text-6xl">
+                  Africa
+                  <span className="text-red-500"> Blood Bank</span>
+                  <br />
+                  Information System Hackathon
+                </h1>
+
+                <p className="mx-auto mt-5 max-w-2xl text-xs leading-5 text-neutral-400 sm:text-sm">
+                  Build the digital future of blood services in Africa.
+                  Design the next generation of Blood Bank Information Systems
+                  that strengthen health systems and save lives.
+                </p>
+
+                <div className="mt-5 flex items-center justify-center gap-4">
+                  <div className="h-7 w-px bg-emerald-500/40" />
+
+                  <div className="text-left">
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-neutral-500">
+                      Registration closes
+                    </p>
+
+                    <p className="mt-1 text-xs font-semibold text-white">
+                      Friday, 18 September 2026
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mx-auto mt-8 max-w-3xl border-t border-white/10 pt-6">
+                <div className="mb-4 flex items-end justify-between">
+                  <div>
+                    <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-red-400">
+                      Ready to build?
+                    </p>
+
+                    <h2 className="mt-1 text-xl font-bold tracking-tight sm:text-2xl">
+                      Register your team.
+                    </h2>
+                  </div>
+
+                  <p className="hidden text-right text-[10px] leading-4 text-neutral-600 sm:block">
+                    Code for Blood.
+                    <br />
+                    Code for Life.
+                  </p>
+                </div>
+
+                <div className="relative border border-white/10 bg-[#071411] p-4 sm:p-2">
+                  <div className="absolute -left-px -top-px h-6 w-6 border-l border-t border-emerald-400" />
+                  <div className="absolute -right-px -top-px h-6 w-6 border-r border-t border-red-500" />
+                  <div className="absolute -bottom-px -left-px h-6 w-6 border-b border-l border-red-500" />
+                  <div className="absolute -bottom-px -right-px h-6 w-6 border-b border-r border-emerald-400" />
+
+                  <RegistrationForm />
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
 
-        <RegistrationForm />
-      </main>
+        <footer className="shrink-0 border-t border-white/10 pt-3">
+          <div className="flex items-center justify-between gap-4">
+            <p className="font-mono text-[9px] uppercase tracking-[0.25em] text-neutral-600">
+              ABBIS Hackathon 2026
+            </p>
 
+            <p className="max-w-sm text-right text-[10px] leading-4 text-neutral-600">
+              Transforming blood services through AI, innovation and
+              collaboration.
+            </p>
+          </div>
+        </footer>
+      </main>
     </div>
-  );
+  )
 }
