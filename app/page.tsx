@@ -2,10 +2,14 @@
 
 import RegistrationForm from "@/app/components/form";
 import { useState } from "react";
+import FloatingNavbar from "./components/Navbar";
 
 export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-neutral-950">
+      <div className="px-4">
+        <FloatingNavbar />
+      </div>
       <main className="mx-auto max-w-4xl px-4 pt-28 pb-24 sm:pt-36 sm:pb-32">
         <div className="mb-10 space-y-2">
           <p className="text-xs font-mono uppercase tracking-widest text-neutral-500">

@@ -24,4 +24,5 @@ export const registrationSchema = z.object({
   })).max(3),
 });
 
+
 export type RegistrationInput = z.infer<typeof registrationSchema>;
