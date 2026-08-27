@@ -1,8 +1,6 @@
 'use client';
 
-import Navbar from "@/components/navbar";
 import RegistrationForm from "@/app/components/form";
-import Footer from "@/components/footer";
 import { useState } from "react";
 
 export default function RegisterPage() {

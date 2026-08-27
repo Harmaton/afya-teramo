@@ -15,13 +15,13 @@ export const registrationSchema = z.object({
   leadEmail: z.string().email(),
   leadPhone: z.string().min(7),
   country: z.string().min(2),
-  ageConfirmed: z.literal(true, { errorMap: () => ({ message: 'Must confirm you are 18-35' }) }),
+  ageConfirmed: z.literal(true, { message: 'Must confirm you are 18-35' }),
   portfolioLink: z.string().url(),
   workHistory: z.string().min(10),
   members: z.array(z.object({
     name: z.string(),
     email: z.string().email(),
-  })).max(3), // lead + up to 3 = 4 max
+  })).max(3),
 });
 
 export type RegistrationInput = z.infer<typeof registrationSchema>;
